@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div style="border-width: 5px; border-style: groove">
+      <form>
+        <h4>BASIC INFORMATION:</h4>
+
+        <label for="1"> Name :</label>
+        <input type="text" id="1" name="name" value="john" /> <br />
+        <br />
+
+        <label for="2"> Birth Date :</label>
+        <input type="date" id="2" name="date" /> <br /><br />
+
+        Gender:
+        <input type="radio" id="3" name="gender" value="male" />
+        <label for="3"> Male</label>
+
+        <input type="radio" id="4" name="gen" value="female" />
+        <label for="4"> Female </label>
+        <br /><br />
+
+        <label for="4"> Address :</label>
+        <input type="text" id="4" name="add" value="Delhi" />
+        <br />
+        <br />
+
+        <label for="5"> Phone Number : </label>
+        <input type="number" id="5" name="phoneNo" value="03000" />
+
+        <br />
+        <br />
+
+        <div style="border-width: 5px; border-style: groove">
+          <h4>EXTRA INFORMATION:</h4>
+
+          Interests:
+          <input type="checkbox" id="intr1" name="intr1" value="books" />
+          <label for="intr1"> Books </label>
+
+          <input type="checkbox" id="intr2" name="intr2" value="Movies" />
+          <label for="intr2"> Movies </label>
+
+          <input type="checkbox" id="intr3" name="intr3" value="Video Games" />
+          <label for="intr3"> Video Games</label>
+
+          <br /><br />
+
+          <label for="col"> Favorite Color:</label>
+          <input type="color" id="col" name="color" value="#ff0000" />
+
+          <br />
+        </div>
+        <br />
+        <input type="submit" value="submit Form" />
+        <input type="reset" value="Reset Form" />
+      </form>
+    </div>
+  </body>
+</html>

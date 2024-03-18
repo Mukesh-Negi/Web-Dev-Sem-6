@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <titl> image map </titl>
+  </head>
+  <body>
+    <h1>click on the shapes to go to new web pages</h1>
+
+    <img
+      src="map.png"
+      alt="imageMap"
+      usemap="#myMap"
+      width="683"
+      height="384"
+    />
+
+    <map name="myMap">
+      <area
+        shape="rect"
+        coords="40,35,306,174"
+        alt="rectanle"
+        href="https://en.wikipedia.org/wiki/Rectangle"
+      />
+
+      <area
+        shape="circle"
+        coords="541,110,87"
+        alt="circle"
+        href="https://en.wikipedia.org/wiki/Circle"
+      />
+
+      <area
+        shape="poly"
+        coords="343,223,296,281,242,346,356,345,489,345,406,274"
+        alt="triangle"
+        href="https://en.wikipedia.org/wiki/Polygon"
+      />
+    </map>
+  </body>
+</html>

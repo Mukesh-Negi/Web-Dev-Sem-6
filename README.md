@@ -1,1 +1,1 @@
-Web Dev Sem 6 HTML Codes
+Web Dev Sem 6 Codes

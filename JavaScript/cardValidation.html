@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form Validation  </title>
+
+    <script>
+        
+        function validateForm()
+        {
+            let a = document.getElementById('1').value;
+            let b = document.getElementById('2').value;
+            let c = document.getElementById('3').value;
+
+            if( a == "Master Card")
+            {
+                if(b >= 51 && b <= 55 && c == 16 ) return true;
+
+                else  alert("Invalid MasterCard number");
+            }
+            else if( a== "Visa")
+            {
+                if( b == 4 && c >= 13 && c <= 16) return true;
+
+                else alert("Invalid Visa number");
+            }
+            else if ( a == "American Express")
+            {
+                if( b >= 34 && b <= 37 && c == 15) return true;
+                else  alert("Invalid American Express number");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <form name="myForm" onsubmit="return validateForm()">
+
+        Type :
+        <select id="1">
+            <option value="Master Card"> Master Card </option> 
+            <option value="Visa"> Visa  </option>
+            <option value="American Express"> American Express  </option> 
+        </select>
+        
+        <br> <br>
+
+        prefix : <input type="number" id="2"> <br> <br>
+
+        Length : <input type="number" id="3"> <br> <br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling checkboxex</title>
+
+    <script>
+      function validateCourse() {
+        let sel = document.getElementsByName("course");
+
+        let cnt = 0;
+        for (let i = 0; i < sel.length; i++) {
+          if (sel[i].checked == true) {
+            cnt++;
+          }
+
+          if (cnt > 1) {
+            alert("YOU CAN SELECT ONLY ONE CHECKBOX");
+            return false;
+          }
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form style="border-style: groove">
+      <h2 style="text-align: center">You can select only one check box</h2>
+
+      <label for="name"> Name :</label>
+      <input type="text" id="name" name="name" />
+
+      <br /><br />
+
+      <label for="2"> ID : </label>
+      <input type="number" id="2" name="id" />
+
+      <br /><br />
+
+      Course:
+      <label for="3">B.Tech </label>
+      <input
+        type="checkbox"
+        id="3"
+        name="course"
+        value="btech"
+        onclick="return validateCourse()"
+      />
+
+      <label for="4">BCA </label>
+      <input
+        type="checkbox"
+        id="4"
+        name="course"
+        value="bca"
+        onclick="return validateCourse()"
+      />
+
+      <label for="5">M.Tech</label>
+      <input
+        type="checkbox"
+        id="5"
+        name="course"
+        value="mtech"
+        onclick="return validateCourse()"
+      />
+
+      <label for="6">MCA</label>
+      <input
+        type="checkbox"
+        id="6"
+        name="course"
+        value="mca"
+        onclick="return validateCourse()"
+      />
+
+      <br />
+      <br />
+      <input type="submit" value="submit" />
+    </form>
+
+    <p id="50"></p>
+  </body>
+</html>

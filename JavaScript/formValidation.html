@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+
+    <script>
+      function validateForm() {
+        let name = document.getElementById("uname").value;
+        let len = name.length;
+
+        if (len < 6) {
+          alert("Invalid Name : Length is < 6 ");
+          return false;
+        } else {
+          for (let i = 0; i < len; i++) {
+            if (name[i] >= "0" && name[i] <= "9") {
+              alert("Invalid Name : contains digits");
+              return false;
+            }
+          }
+
+          let pass = document.getElementById("pass").value;
+          if (pass.length < 6) {
+            alert("Invalid password : length < 6");
+            return false;
+          }
+
+          //---------------Email Validation---------------
+          //->email id must contain the @ and . character
+          // ->There must be at least one character before and after the @.
+          // ->There must be at least two characters after . (dot).
+          //
+
+          let mail = document.getElementById("mail").value;
+
+          let atPos = mail.indexOf("@");
+          let dotPos = mail.indexOf(".");
+
+          if (atPos < 1 || dotPos < atPos + 2 || dotPos + 2 >= mail.length) {
+            alert(
+              "Please enter a valid e-mail address \n atPositon:" +
+                atPos +
+                "\ndotposition:" +
+                dotPos
+            );
+            return false;
+          }
+
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form style="border-style: groove" onsubmit="return validateForm()">
+      <h3 style="text-align: center">Form Validation</h3>
+      <label for="uname"> User Name : </label>
+      <input type="text" id="uname" name="name" />
+      <br />
+      <br />
+
+      <label for="pass"> Password : </label>
+      <input type="password" id="pass" name="password" />
+      <br />
+      <br />
+
+      <label for="mail"> Email : </label>
+      <input type="text" id="mail" name="password" />
+      <br />
+      <br />
+
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

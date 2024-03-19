@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Byte Converter</title>
+
+    <script>
+      function myConverter() {
+        let from = document.getElementById("1").value;
+        let to = document.getElementById("2").value;
+        let ip = document.getElementById("ip").value;
+
+        if (to == from) return ip + to;
+
+        if (from == "kb" && to == "mb") {
+          return ip / 1000 + "mb";
+        } else if (from == "kb" && to == "gb") {
+          return ip / 1000000 + "gb";
+        } else if (from == "mb" && to == "kb") {
+          return ip * 1000 + "kb";
+        } else if (from == "mb" && to == "gb") {
+          return ip / 1000 + "gb";
+        } else if (from == "gb" && to == "kb") {
+          return ip * 1000000 + "kb";
+        } else if (from == "gb" && to == "mb") {
+          return ip * 1000 + "mb";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2 style="text-align: center; border-style: groove">Byte Converter</h2>
+
+    <form oninput="res.value=myConverter()">
+      <label for="ip"> Input :</label>
+      <input type="number" id="ip" name="Input" value="0" />
+
+      <label for="1"> Convert From :</label>
+      <select id="1" name="from">
+        <option value="kb">kb</option>
+        <option value="mb">mb</option>
+        <option value="gb">gb</option>
+      </select>
+
+      <label for="2"> Convert To : </label>
+      <select id="2" name="to">
+        <option value="kb">kb</option>
+        <option value="mb">mb</option>
+        <option value="gb">gb</option>
+      </select>
+
+      <br />
+      <br />
+
+      <label for="op"> Output is :</label>
+      <output name="res" for=" 1 2"></output>
+
+      <br />
+    </form>
+  </body>
+</html>
